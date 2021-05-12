@@ -40,6 +40,7 @@ dept_manager.emp_no = e.emp_no;
 -- List the department of each employee with the following information: 
 -- 	employee number, last name, first name, and department name.
 
+CREATE VIEW emp_dept AS
 SELECT e.emp_no,
 e.last_name AS employee_last_name,
 e.first_name AS employee_first_name,
@@ -65,31 +66,17 @@ AND last_name LIKE 'B%';
 -- List all employees in the Sales department, including their employee number, 
 --	last name, first name, and department name.
 
-SELECT e.emp_no,
-	e.last_name AS employee_last_name,
-	e.first_name AS employee_first_name,
-	departments.dept_name AS employee_dept_name
-FROM employees AS e
-JOIN dept_emp ON
-e.emp_no = dept_emp.emp_no
-JOIN departments ON
-dept_emp.dept_no = departments.dept_no
-WHERE dept_name = 'Sales';
+SELECT *
+FROM emp_dept
+WHERE employee_dept_name = 'Sales';
 
 -- Query 7
 -- List all employees in the Sales and Development departments, 
 --	including their employee number, last name, first name, and department name.
 
-SELECT e.emp_no,
-	e.last_name AS employee_last_name,
-	e.first_name AS employee_first_name,
-	departments.dept_name AS employee_dept_name
-FROM employees AS e
-JOIN dept_emp ON
-e.emp_no = dept_emp.emp_no
-JOIN departments ON
-dept_emp.dept_no = departments.dept_no
-WHERE dept_name = 'Sales' OR dept_name = 'Development';
+SELECT *
+FROM emp_dept
+WHERE employee_dept_name = 'Sales' OR employee_dept_name = 'Development';
 
 -- Query 8
 -- In descending order, list the frequency count of employee last names,
