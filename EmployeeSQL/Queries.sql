@@ -9,7 +9,8 @@ SELECT e.emp_no AS employee_number,
 	s.salary AS employee_salary
 FROM employees e
 JOIN salaries s
-ON e.emp_no = s.emp_no;
+ON e.emp_no = s.emp_no
+ORDER BY e.emp_no;
 
 -- Query 2
 -- List first name, last name, and hire date 
@@ -40,6 +41,18 @@ dept_manager.emp_no = e.emp_no;
 -- List the department of each employee with the following information: 
 -- 	employee number, last name, first name, and department name.
 
+SELECT e.emp_no,
+e.last_name AS employee_last_name,
+e.first_name AS employee_first_name,
+departments.dept_name AS employee_dept_name
+FROM employees AS e
+JOIN dept_emp ON
+e.emp_no = dept_emp.emp_no
+JOIN departments ON
+dept_emp.dept_no= departments.dept_no;
+
+--Create view to use in queries 6 & 7
+
 CREATE VIEW emp_dept AS
 SELECT e.emp_no,
 e.last_name AS employee_last_name,
@@ -49,7 +62,7 @@ FROM employees AS e
 JOIN dept_emp ON
 e.emp_no = dept_emp.emp_no
 JOIN departments ON
-dept_emp.dept_no = departments.dept_no;
+dept_emp.dept_no= departments.dept_no;
 
 --Query 5
 -- List first name, last name, and sex for employees whose first name is "Hercules" 
