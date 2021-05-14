@@ -13,12 +13,18 @@ CREATE TABLE "departments" (
 
 CREATE TABLE "dept_emp" (
     "emp_no" int   NOT NULL,
-    "dept_no" varchar(4)   NOT NULL
+    "dept_no" varchar(4)   NOT NULL,
+    CONSTRAINT "pk_dept_emp" PRIMARY KEY (
+        "emp_no","dept_no"
+     )
 );
 
 CREATE TABLE "dept_manager" (
     "dept_no" varchar(4)   NOT NULL,
-    "emp_no" int   NOT NULL
+    "emp_no" int   NOT NULL,
+    CONSTRAINT "pk_dept_manager" PRIMARY KEY (
+        "dept_no","emp_no"
+     )
 );
 
 CREATE TABLE "employees" (
@@ -36,7 +42,10 @@ CREATE TABLE "employees" (
 
 CREATE TABLE "salaries" (
     "emp_no" int   NOT NULL,
-    "salary" numeric   NOT NULL
+    "salary" numeric   NOT NULL,
+    CONSTRAINT "pk_salaries" PRIMARY KEY (
+        "emp_no"
+     )
 );
 
 CREATE TABLE "titles" (
