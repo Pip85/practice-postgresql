@@ -65,6 +65,7 @@ AND last_name LIKE 'B%';
 -- Query 6
 -- List all employees in the Sales department, including their employee number, 
 --	last name, first name, and department name.
+--	Uses view created in Query 4
 
 SELECT *
 FROM emp_dept
@@ -73,6 +74,7 @@ WHERE employee_dept_name = 'Sales';
 -- Query 7
 -- List all employees in the Sales and Development departments, 
 --	including their employee number, last name, first name, and department name.
+--	Uses view created in Query 4
 
 SELECT *
 FROM emp_dept
