@@ -26,7 +26,7 @@ Background and datasets provided as part of Georgia Tech Data Analytics Boot Cam
 Mockaroo, LLC. (2021). Realistic Data Generator. [https://www.mockaroo.com/](https://www.mockaroo.com/)<br>
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
 
-Author:  Valerie Pippenger - https://github.com/Pip85
+Project Author:  Valerie Pippenger - https://github.com/Pip85
 
 ## **process**
 
@@ -40,7 +40,8 @@ Table Schema:  https://github.com/Pip85/sql-db-employee-analysis/blob/main/Emplo
 
 Using pgAdmin4, the database was created and the table schema was run within the database.  Now the database included 6 empty tables for employee, salary, department and title information.
 The 6 provided csv files were then imported, using pgAdmin4, into their respective tables.
-Eight queries were then run on the data.  Details can be found in the queries file included in this repository.
+Eight queries were then run on the data.  Details can be found in the queries file included in this repository.<br>
+
 Queries:  https://github.com/Pip85/sql-db-employee-analysis/blob/main/EmployeeSQL/Queries.sql
 
 For the bonus section, a Jupyter Notebook was created.  The SQL database was then imported into the notebook using sqlalchemy.  Data was imported into salaries, employees and titles dataframes for use in plots.  The first plot is a histogram showing the salary ranges of employees.
