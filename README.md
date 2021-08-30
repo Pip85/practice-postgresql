@@ -1,4 +1,4 @@
-# **sql-db-employee-analysis**
+# **practice-postgresql**
 
 Student project - Analyze employee records from the 1980's & 1990's.
 
